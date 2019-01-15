@@ -20,5 +20,7 @@ from sign import views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     #添加index/路径配置
-    url(r'^index/$',views.index),
+    url(r'^login/$', views.login),
+    url(r'^login_action/$', views.login_action),
+    url(r'^event_manage/$',views.event_manage),
 ]
