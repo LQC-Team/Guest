@@ -7,18 +7,21 @@ import urllib.request
 from django.template import RequestContext
 
 # Create your views here.
-def login(request):
-    return render(request,"login.html")
-def login_action(request):
-    if request.method=="POST":
-        username = request.POST.get('username','')
-        password = request.POST.get('password','')
-        if username == 'admin' and password == 'admin':
-            return HttpResponseRedirect('/event_manage/')
-        else:
-            return render(request,'login.html',{'error':'username or password error'})
-def event_manage(request):
-    return render(request,'event_manage.html')
+# def login(request):
+#     return render(request,"login.html")
+# def login_action(request):
+#     if request.method=="POST":
+#         username = request.POST.get('username','')
+#         password = request.POST.get('password','')
+#         if username == 'admin' and password == 'admin':
+#             return HttpResponseRedirect('/event_manage/')
+#         else:
+#             return render(request,'login.html',{'error':'username or password error'})
+
+def index(request):
+
+    return render(request, 'index.html')
+
 
     
     
